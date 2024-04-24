@@ -11,7 +11,12 @@ docker build . -t <image_name>
 shared_preload_libraries = 'pg_cron'
 ```
 
-Thats it. Now you can use this - 
+Thats it. 
+## Example uses - 
+Create the Extension - 
+```SQL
+CREATE EXTENSION pg_cron SCHEMA pg_catalog;
+```
 ```SQL
 -- Delete old data on Saturday at 3:30am (GMT)
 SELECT cron.schedule('30 3 * * 6', $$DELETE FROM events WHERE event_time < now() - interval '1 week'$$);
