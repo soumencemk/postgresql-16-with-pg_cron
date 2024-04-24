@@ -1,5 +1,5 @@
 # Postgres 16 with pg_cron extension Docker 
-
+### You can use - `itssoumen/postgresql-server` Image from dockerhub directly, or build it yourself.
 # How to build/install
 - Clone the repo
 - Run the following : 
