@@ -59,3 +59,5 @@ SELECT cron.schedule('process-updates', '5 seconds', 'CALL process_updates()');
 -- Process payroll at 12:00 of the last day of each month
 SELECT cron.schedule('process-payroll', '0 12 $ * *', 'CALL process_payroll()'); 
 ```
+## Sample kubernetes manifest with postgres 16, pg_cron and pgbouncer
+[sample deployment manifest](./deployment.yaml)
